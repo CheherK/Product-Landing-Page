@@ -84,6 +84,7 @@ body {
     #header .logo {
         width: 100%;
         text-align: center;
+        padding: 10px;
     }
 }
 #header .logo img {
@@ -109,6 +110,11 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
+}
+@media (max-width: 450px) {
+    #header nav ul li {
+        padding: 10px;
+    }
 }
 #header nav ul li::before {
     content: "";
@@ -139,7 +145,12 @@ body {
 }
 @media (max-width: 768px) {
     .landing {
-        margin-top: 135px;
+        margin-top: 115px;
+    }
+}
+@media (max-width: 450px) {
+    .landing {
+        margin-top: 95px;
     }
 }
 .landing .container .form {
@@ -207,4 +218,70 @@ body {
     font-size: 19px;
     color: #777;
 }
+.landing .video {
+    text-align: center;
+    padding: 20px;
+}
+.landing .video iframe {
+    width: 70%;
+    height: 50vh;
+}
+@media (max-width: 768px) {
+    .landing .video iframe {
+        width: 100%;
+        height: 30vh;
+    }
+}
+.landing .pricing {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 0;
+}
+.landing .pricing .box {
+    border: 1px solid #646363;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    border-radius: 10px;
+    transition: .4s;
+}
+.landing .pricing .box:hover {
+    transform: translateY(-15px);
+    border: 2px solid darkorange;
+    box-shadow: darkorange 0px 3px 8px;
+}
+.landing .pricing .box h3 {
+    padding: 20px;
+    background-color: darkorange;
+    border-radius: 10px 10px 0 0;
+}
+.landing .pricing .box span {
+    display: block;
+    padding-top: 20px;
+    font-size: 30px;
+    font-weight: 700;
+}
+.landing .pricing .box p {
+    padding: 20px;
+    line-height: 1.7;
+    color: #777
+}
+.landing .pricing .box button {
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #646363;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .4s;
+    margin-bottom: 20px;
+}
+.landing .pricing .box button:hover {
+    background-color: #c5bfbf;
+    color: black;
+}
 /* end landing  */
+#end {
+    text-align: center;
+}
